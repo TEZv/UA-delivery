@@ -8,6 +8,7 @@ import Cart from "./components/Cart/Cart.js";
 import { CartContextProvider } from "./store/CartContextProvider";
 
 const App = () => {
+  const [title, setTitle] = useState("");
   const [showCart, setShowCart] = useState(false);
 
   const showCartHandler = () => {
@@ -23,8 +24,8 @@ const App = () => {
       <CartContextProvider>
         <Header onShowCart={showCartHandler} />
         <BodyWrapper>
-          <Summary />
-          <AvailableDishes />
+          <Summary setTitle={setTitle} />
+          <AvailableDishes title={title} />
           {showCart && <Cart onClose={hideCartHandler} />}
         </BodyWrapper>
       </CartContextProvider>

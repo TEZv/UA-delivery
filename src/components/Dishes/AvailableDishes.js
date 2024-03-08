@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Spinner from "../UI/Spinner/Spinner";
 import styles from "./AvailableDishes.module.css";
 
-const AvailableDishes = (props) => {
+const AvailableDishes = ({ title }) => {
   const [meals, setMeals] = useState([]);
   const { loading, error, requestHttp: fetchMeals } = useHttp();
 
@@ -58,6 +58,7 @@ const AvailableDishes = (props) => {
     <div
       className={`container border-2 border-dashed border-black flex flex-col space-y-6 mx-auto w-full md:w-2/5 divide-y-2 divide-gray-800 mt-32 max-h-150 overflow-scroll scroll-smooth snap-y bg-beige p-14 rounded-md dropshadow-md ${styles.noscroll}`}
     >
+      {<h2 className="text-center font-bold">{title}</h2>}
       {content}
     </div>
   );
