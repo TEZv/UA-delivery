@@ -39,7 +39,7 @@ const Cart = (props) => {
   const cartView = (
     <>
       <CartList items={items} />
-      <hr className="bg-black h-1"></hr>
+      <hr className="bg-gray-400 h-1"></hr>
       <div className="flex justify-between">
         <div className="text-xl tracking-wider">Total Cost</div>
         <div className="text-xl font-semibold tracking-wider">

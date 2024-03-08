@@ -56,7 +56,7 @@ const AvailableDishes = (props) => {
 
   return (
     <div
-      className={`container border-2 border-dashed border-black flex flex-col space-y-6 mx-auto w-full md:w-2/5 divide-y-2 divide-gray-200 mt-10 max-h-96 overflow-scroll scroll-smooth snap-y bg-beige p-4 rounded-md dropshadow-md ${styles.noscroll}`}
+      className={`container border-2 border-dashed border-black flex flex-col space-y-6 mx-auto w-full md:w-2/5 divide-y-2 divide-gray-800 mt-32 max-h-150 overflow-scroll scroll-smooth snap-y bg-beige p-14 rounded-md dropshadow-md ${styles.noscroll}`}
     >
       {content}
     </div>

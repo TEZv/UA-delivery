@@ -10,7 +10,7 @@ const Header = (props) => {
       <div className="text-blue-200 text-4xl font-bold tracking-wider border-y-4 border-yellow-300 border-double rounded-lg bg-blue-800">
         UA-Delivery
       </div>
-      <div className="hidden lg:flex text-slate-100 text-3xl subpixel-antialiased border-x-4 border-yellow-100 rounded-lg bg-green-600 tracking-widest underline decoration-yellow decoration-5 underline-offset-6">
+      <div className="hidden lg:flex text-slate-100 text-3xl subpixel-antialiased border-x-4 border-yellow-100 rounded-lg bg-purple-600 tracking-widest underline decoration-yellow decoration-5 underline-offset-6">
         Welcome to our space!
       </div>
       <div className="flex justify-between items-center space-x-3">
