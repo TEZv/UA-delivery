@@ -33,7 +33,7 @@ const Cart = (props) => {
       body: JSON.stringify({ user: userData, orderedItems: items }),
     });
     setDidSubmit(true);
-    clearCart()
+    clearCart();
   };
 
   const cartView = (
@@ -73,10 +73,10 @@ const Cart = (props) => {
 
   const successView = (
     <>
-      <div className="text-2xl text-darkGreen text-center">It Was SuccessFul!</div>
-      <div className="text-center text-sm">
-        Thanks for the order!
+      <div className="text-2xl text-darkGreen text-center">
+        It Was SuccessFul!
       </div>
+      <div className="text-center text-sm">Thanks for the order!</div>
       <div className="text-center text-sm">
         I'm Sure Your order will arive shortly...
       </div>

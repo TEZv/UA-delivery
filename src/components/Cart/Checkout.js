@@ -4,7 +4,7 @@ import InvertedButton from "../UI/Buttons/InvertedButton";
 import Input from "../UI/Input/Input";
 
 const isNonEmpty = (value) => value.trim().length > 0;
-const isValidZIP = (value) => !isNaN(value) && value.trim().length == 5;
+const isValidZIP = (value) => !isNaN(value) && value.trim().length === 5;
 const isValidEmail = (value) =>
   isNonEmpty(value) && value.includes("@") && value.includes(".");
 

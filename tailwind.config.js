@@ -13,7 +13,7 @@ module.exports = {
         '4': '1.25rem',
       },
       colors: {
-        "beige": "#EEEAED",
+        "beige": "#AF9ADF",
         "roseRed": "#FE0435",
         "kindaBlack": "#181E27",
         "darkGreen": "#00272B",

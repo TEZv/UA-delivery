@@ -12,7 +12,7 @@ const DishItemForm = (props) => {
     const enteredAmountNumber = +enteredAmount;
 
     if (
-      enteredAmount.trim().length == 0 ||
+      enteredAmount.trim().length === 0 ||
       enteredAmountNumber < 1 ||
       enteredAmountNumber > 23
     ) {
@@ -27,7 +27,7 @@ const DishItemForm = (props) => {
   return (
     <form className="flex flex-col space-y-4 basis-34" onSubmit={submitHandler}>
       <div className="flex items-center justify-end space-x-2">
-        <div className="font-semibold">Cost:</div>
+        <div className="font-semibold">Quantity:</div>
         <input
           ref={amountInputRef}
           className="w-6/12 text-center font-semibold rounded-lg"
@@ -38,7 +38,7 @@ const DishItemForm = (props) => {
           type="number"
         ></input>
       </div>
-      <Button className="py-2 px-8 bg-roseRed">+ Add</Button>
+      <Button className="py-2 px-8">+ Add</Button>
       {!amountIsValid && <p className="text-xs italic">Please enter a valid amount (1 - 23).</p>}
     </form>
   );

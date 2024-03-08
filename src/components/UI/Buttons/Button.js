@@ -1,5 +1,5 @@
 const Button = (props) => {
-  const buttonStyle = "text-white text-sm font-medium bg-roseRed p-3 rounded-full drop-shadow-md hover:scale-110 hover:translate-y-1 hover:translate-x-1 transition-all duration-150 active:bg-red-800 disabled:bg-gray-300"
+  const buttonStyle = "bg-green-800 text-blue-100 text-xl-2 p-3 rounded-full drop-shadow-md hover:scale-80 hover:translate-y-1 transition-all duration-100 active:bg-red-600 disabled:bg-gray-400"
   const extendedButtonStyle = [
     props.className,
     buttonStyle

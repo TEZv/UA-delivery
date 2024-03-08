@@ -5,7 +5,7 @@ const ShoppingCartIcon = () => {
       className="h-8 w-8"
       fill="none"
       viewBox="0 0 24 24"
-      stroke="red"
+      stroke="#FFF1AF"
       strokeWidth="2"
     >
       <path
