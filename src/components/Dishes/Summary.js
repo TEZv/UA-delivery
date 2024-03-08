@@ -7,10 +7,10 @@ const Summary = (props) => {
       <div className="text-lg md:w-2/3 mx-auto text-white font-medium">
         Hey there! Delicious, home-cooked meals delivered straight to your
         doorstep. Our dishes come from all corners of Ukraine, so there's
-        something for everyone's taste buds. Feel free to scroll down and check
-        out all the yummy options!😊
+        something for everyone's taste buds. Feel free to check out all the
+        yummy options!😊
         <div className="text-lg md:w-2/3 mx-auto text-white font-bold">
-          We collaborate with 4 restaurants: <br />
+          We collaborate with <span className="bg-beige hover:bg-yellow-400 hover:text-blue-800 text-red-700 cursor-pointer rounded-md px-2 py-1">4 restaurants:</span> <br />
           BuB Pizzeria || Cat&Flow || Lucky Guy eats here || I'm Cook :)
         </div>
       </div>
