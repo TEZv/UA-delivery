@@ -1,8 +1,8 @@
 import Button from "../../UI/Buttons/Button";
 import { useRef, useState } from "react";
 
-const DishItemForm = ({ selectedShop, onAddToCart }) => {
-  const [amountIsValid, setAmountIsValid] = useState(true);
+const DishItemForm = (props) => {
+  const [amountIsValid, setAmountIsValid] = useState(true)
   const amountInputRef = useRef();
 
   const submitHandler = (event) => {
@@ -16,12 +16,12 @@ const DishItemForm = ({ selectedShop, onAddToCart }) => {
       enteredAmountNumber < 1 ||
       enteredAmountNumber > 23
     ) {
-      setAmountIsValid(false);
+      setAmountIsValid(false)
       return;
     }
-    setAmountIsValid(true);
-    onAddToCart(enteredAmountNumber);
-    amountInputRef.current.value = "";
+    setAmountIsValid(true)
+    props.onAddToCart(enteredAmountNumber);
+    amountInputRef.current.value = ""
   };
 
   return (
@@ -31,13 +31,14 @@ const DishItemForm = ({ selectedShop, onAddToCart }) => {
         <input
           ref={amountInputRef}
           className="w-6/12 text-center font-semibold rounded-lg"
+          id={props.id}
           min="0"
           max="23"
           step="1"
           type="number"
-        />
+        ></input>
       </div>
-      <Button className="py-2 px-8" disabled={!selectedShop}>+ Add</Button>
+      <Button className="py-2 px-8">+ Add</Button>
       {!amountIsValid && <p className="text-xs italic">Please enter a valid amount (1 - 23).</p>}
     </form>
   );

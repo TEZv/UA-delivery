@@ -5,7 +5,7 @@ const Summary = ({ setTitle }) => {
 
   const handleSetTitle = (title) => {
     setTitle(title);
-    setSelectedShop(selectedShop === title ? null : title); // Update selectedShop based on the currently selected shop
+    setSelectedShop(title === selectedShop ? null : title);
   };
 
   return (
