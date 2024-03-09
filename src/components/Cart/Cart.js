@@ -12,7 +12,7 @@ const Cart = (props) => {
   const [showCheckout, setShowCheckout] = useState(false);
   const [didSubmit, setDidSubmit] = useState(false);
   const { items, totalAmount, clearCart } = useCart();
-  const { loading, error, requestHttp: submitOrder } = useHttp();
+  const { loading, requestHttp: submitOrder } = useHttp();
 
   const fixedTotalAmount = `$${totalAmount.toFixed(2)}`;
 
@@ -78,7 +78,7 @@ const Cart = (props) => {
       </div>
       <div className="text-center text-sm">Thanks for the order!</div>
       <div className="text-center text-sm">
-        I'm Sure Your order will arive shortly...
+        I'm Sure Your order will arrive shortly...
       </div>
       <Button className="w-40 self-end" onClick={props.onClose}>
         Okay
