@@ -1,5 +1,12 @@
+import { useState } from 'react'; // Add this import statement
+
 const Summary = ({ setTitle }) => {
-  const handleSetTitle = (title) => setTitle(title);
+  const [selectedShop, setSelectedShop] = useState(null); // Add selectedShop state
+
+  const handleSetTitle = (title) => {
+    setTitle(title);
+    setSelectedShop(selectedShop === title ? null : title); // Update selectedShop based on the currently selected shop
+  };
 
   return (
     <div className="container pt-12 mx-auto flex-col text-kindaBlack space-y-10 pl-4 text-center">
@@ -27,25 +34,29 @@ const Summary = ({ setTitle }) => {
           <div className="">
             <button
               onClick={() => handleSetTitle("🍕BuB Pizzeria")}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-8 px-32 rounded-2xl mr-2"
+              className={`bg-blue-500 hover:bg-blue-600 text-white font-bold py-8 px-32 rounded-2xl mr-2 ${selectedShop !== null && selectedShop !== "🍕BuB Pizzeria" && "disabled:bg-gray-500"}`}
+              disabled={selectedShop !== null && selectedShop !== "🍕BuB Pizzeria"}
             >
               🍕BuB Pizzeria
             </button>
             <button
               onClick={() => handleSetTitle("🍔Cat&Flow")}
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-8 px-32 rounded-2xl mr-2 mt-6"
+              className={`bg-green-500 hover:bg-green-600 text-white font-bold py-8 px-32 rounded-2xl mr-2 mt-6 ${selectedShop !== null && selectedShop !== "🍔Cat&Flow" && "disabled:bg-gray-500"}`}
+              disabled={selectedShop !== null && selectedShop !== "🍔Cat&Flow"}
             >
               🍔Cat&Flow
             </button>
             <button
               onClick={() => handleSetTitle("🍓Lucky Guy eats here")}
-              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-8 px-28 rounded-2xl mr-2 mt-6"
+              className={`bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-8 px-28 rounded-2xl mr-2 mt-6 ${selectedShop !== null && selectedShop !== "🍓Lucky Guy eats here" && "disabled:bg-gray-500"}`}
+              disabled={selectedShop !== null && selectedShop !== "🍓Lucky Guy eats here"}
             >
               🍓Lucky Guy eats here
             </button>
             <button
-              onClick={() => handleSetTitle("🥦I'm Cook :")}
-              className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-8 px-32 rounded-2xl mr-2 mt-6"
+              onClick={() => handleSetTitle("🥦I'm Cook :)")}
+              className={`bg-pink-600 hover:bg-pink-700 text-white font-bold py-8 px-32 rounded-2xl mr-2 mt-6 ${selectedShop !== null && selectedShop !== "🥦I'm Cook :)" && "disabled:bg-gray-500"}`}
+              disabled={selectedShop !== null && selectedShop !== "🥦I'm Cook :)"}
             >
               🥦I'm Cook :)
             </button>
